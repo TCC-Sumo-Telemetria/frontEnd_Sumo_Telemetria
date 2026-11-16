@@ -53,31 +53,5 @@ async function encerrar() {
 </script>
 
 <style scoped>
-form {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 12px;
-  align-items: flex-end;
-}
-label {
-  display: flex;
-  flex-direction: column;
-  font-size: 13px;
-  gap: 4px;
-}
-input {
-  padding: 6px 8px;
-  border: 1px solid #c9d3e6;
-  border-radius: 6px;
-}
-.botoes {
-  display: flex;
-  gap: 8px;
-}
-.ok {
-  color: #1e8e3e;
-}
-.erro {
-  color: #c62828;
-}
+/* estilos no style.css */
 </style>

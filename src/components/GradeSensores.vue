@@ -19,7 +19,11 @@
         </tr>
       </tbody>
     </table>
-    <p class="legenda">Tempo em segundos · azul = 1 · cinza = 0</p>
+    <div class="legenda">
+      <span><i class="quad um"></i> 1 · sem detecção</span>
+      <span><i class="quad zero"></i> 0 · sensor detectou (mudou de estado)</span>
+      <span>Colunas = tempo em segundos</span>
+    </div>
   </div>
 </template>
 
@@ -41,13 +45,13 @@ table {
   font-size: 11px;
 }
 th {
-  color: #5a5a5a;
+  color: #8f9bb8;
   font-weight: normal;
 }
 th.nome {
   text-align: left;
   font-weight: bold;
-  color: #1f1f1f;
+  color: #e6ebf5;
   padding-right: 6px;
 }
 td {
@@ -56,13 +60,36 @@ td {
   border-radius: 3px;
 }
 td.um {
-  background: #0b2a7a;
+  background: #5b8cff;
+  box-shadow: 0 0 6px rgba(91, 140, 255, 0.5);
 }
 td.zero {
-  background: #e3e8f2;
+  background: #ef4444;
+  box-shadow: 0 0 6px rgba(239, 68, 68, 0.6);
 }
 .legenda {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px;
+  margin-top: 10px;
   font-size: 12px;
-  color: #5a5a5a;
+  color: #8f9bb8;
+}
+.legenda span {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.quad {
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  border-radius: 3px;
+}
+.quad.um {
+  background: #5b8cff;
+}
+.quad.zero {
+  background: #ef4444;
 }
 </style>
